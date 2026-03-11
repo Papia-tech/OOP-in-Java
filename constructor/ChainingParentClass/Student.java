@@ -2,7 +2,7 @@
 //but constructor name will be different
 
 //Constructor chaining is when one constructor calls another constructor in the same class or in the parent class.
-//Within the same class: Use this()
+//Within thke same class: Use this()
 //From parent class (superclass): Use super()
 
 //Can not declare both file as public. Only one file is public
