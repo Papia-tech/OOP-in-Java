@@ -1,4 +1,4 @@
-class Student {
+public class Student {    //Only one class, you can declare it as public or leave it default. More than one class keep it default or declare only one as public
     int id;
     String name;
 
@@ -16,3 +16,6 @@ class Student {
         s.show();
     }
 }
+
+// Output: 
+// 1 Alex
