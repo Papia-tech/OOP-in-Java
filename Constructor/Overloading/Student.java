@@ -38,3 +38,8 @@ class Student {
         s3.display();
     }
 }
+
+//Output::
+//ID: 0, Name: Unknown
+//ID: 101, Name: Unknown
+//ID: 102, Name: Alex
