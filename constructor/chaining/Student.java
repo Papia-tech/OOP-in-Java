@@ -1,24 +1,33 @@
 //Constructor chaining is when one constructor calls another constructor in the same class or in the parent class.
 //Within the same class: Use this()
 //From parent class (superclass): Use super()
-class Student {
+
+public class Student {
     int id;
     String name;
+
+    // No-arg constructor calls 1-parameter constructor
+    Student() {
+        this(0);
+        System.out.println("No-arg constructor called");
+        System.out.println("Default ID: " + id);
+        id=2;
+        name="Papia";//This will be displayed when we call the display method in the main method. It will override the default values set by the no-arg constructor.
+    }
+
+    // 1-parameter constructor calls 2-parameter constructor
+    Student(int id) {
+        this(id, "Unknown");
+        System.out.println("1-parameter constructor called");
+        System.out.println("ID: " + id);
+    }
 
     // 2-parameter constructor
     Student(int id, String name) {
         this.id = id;
         this.name = name;
-    }
-
-    // 1-parameter constructor calls 2-parameter constructor
-    Student(int id) {
-        this(id, "Unknown"); // Must be first statement
-    }
-
-    // No-arg constructor calls 1-parameter constructor
-    Student() {
-        this(0); // Must be first statement
+        System.out.println("2-parameter constructor called");
+        System.out.println("ID: " + id + ", Name: " + name);
     }
 
     void display() {
@@ -26,12 +35,16 @@ class Student {
     }
 
     public static void main(String[] args) {
-        Student s1 = new Student();       
-        Student s2 = new Student(101);    
-        Student s3 = new Student(102, "Alex");
-
-        s1.display();
-        s2.display();
-        s3.display();
+        Student s = new Student();       
+        s.display();
     }
 }
+
+//Output: 
+// 2-parameter constructor called
+// ID: 0, Name: Unknown
+// 1-parameter constructor called
+// ID: 0
+// No-arg constructor called
+// Default ID: 0
+// ID: 2, Name: Papia
