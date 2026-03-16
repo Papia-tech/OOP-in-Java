@@ -10,3 +10,6 @@ class Calculator {
         System.out.println(sum);
     }
 }
+
+//Output:
+//30
