@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class ArrayListOperations {
     public static void main(String[] args) {
 
-        ArrayList<String> fruits = new ArrayList<>();
+        ArrayList<String> fruits = new ArrayList<>(); // Creating Object of class ArrayList
 
         // Add elements
         fruits.add("Apple");
