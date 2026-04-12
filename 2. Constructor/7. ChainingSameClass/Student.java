@@ -1,6 +1,14 @@
-//Constructor chaining is when one constructor calls another constructor in the same class or in the parent class.
-//Within the same class: Use this()
-//From parent class (superclass): Use super()
+// Constructor Chaining is when one constructor calls another constructor in the same class or in the parent class.
+// Within the same class: Use this()
+// From parent class (superclass): Use super()
+// this → refers to current class object; super → refers to parent class object
+
+// Why use Constructor Chaining?
+//    --Constructor chaining is used to avoid code duplication and to reuse initialization logic.
+//    --Code Reusability
+//    --Avoid Code Duplication
+//    --Cleaner Code
+//    --Easier Maintenance
 
 public class Student {
     int id;
@@ -12,7 +20,7 @@ public class Student {
         System.out.println("No-arg constructor called");
         System.out.println("Default ID: " + id);
         id=2;
-        name="Papia";//This will be displayed when we call the display method in the main method. It will override the default values set by the no-arg constructor.
+        name="Papia";// This will be displayed when we call the display method in the main method. It will override the default values set by the no-arg constructor.
     }
 
     // 1-parameter constructor calls 2-parameter constructor
@@ -40,7 +48,7 @@ public class Student {
     }
 }
 
-//Output: 
+// Output: 
 // 2-parameter constructor called
 // ID: 0, Name: Unknown
 // 1-parameter constructor called
