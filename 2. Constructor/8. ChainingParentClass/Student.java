@@ -1,42 +1,35 @@
-//By using inheritance
-//but constructor name will be different
+// By using inheritance
+// But constructor name will be different
 
-//Constructor chaining is when one constructor calls another constructor in the same class or in the parent class.
-//Within thke same class: Use this()
-//From parent class (superclass): Use super()
+// Constructor chaining is when one constructor calls another constructor in the same class or in the parent class.
+// Within the same class: Use this()
+// From parent class (superclass): Use super()
+// If there is multilevel inheritance then super() always calls the immediate parent class constructor not grandparent directly
 
-//Can not declare both file as public. Only one file is public
+// Can not declare both file as public. Only one file is public
 class Person {
     int id;
     String name;
-    
-    // 2-parameter constructor
+
     Person(int id, String name) {
         this.id = id;
         this.name = name;
-        System.out.println("2-parameter constructor called");
-        System.out.println("ID: " + id + ", Name: " + name);
+        System.out.println("Person constructor called");
     }
 }
 
-public class Student extends Person{
-    int id;
-    String name;
+public class Student extends Person {
 
-    // No-arg constructor calls 1-parameter constructor
     Student() {
         this(0);
         System.out.println("No-arg constructor called");
-        System.out.println("Default ID: " + id);
-        id=2;
-        name="Papia";//This will be displayed when we call the display method in the main method. It will override the default values set by the no-arg constructor.
+        id = 2;
+        name = "Papia";
     }
 
-    // 1-parameter constructor calls 2-parameter constructor
     Student(int id) {
         super(id, "Unknown");
         System.out.println("1-parameter constructor called");
-        System.out.println("ID: " + id);
     }
 
     void display() {
@@ -44,12 +37,11 @@ public class Student extends Person{
     }
 
     public static void main(String[] args) {
-        Student s = new Student();       
+        Student s = new Student();
         s.display();
     }
 }
-
-//Output: 
+// Output: 
 // 2-parameter constructor called
 // ID: 0, Name: Unknown
 // 1-parameter constructor called
