@@ -10,6 +10,10 @@
 //    --Cleaner Code
 //    --Easier Maintenance
 
+// Rules ->
+//    --There should be at-least be one constructor without the this() keyword
+//    --Constructor chaining can be achieved in any order.
+
 public class Student {
     int id;
     String name;
