@@ -7,6 +7,16 @@
 
 // ⚠️ Return type alone cannot overload a method.
 
+// Rules ->
+//    --Same Method Name: All overloaded methods must have the same name within the same class or hierarchy.
+//    --Different Parameter List: The methods must have different parameter lists. The difference can be achieved by:
+//          -– Changing the number of parameters (e.g., one method with two integers, another with three integers).
+//          -– Changing the data types of parameters (e.g., one method with two integers, another with two doubles).
+//          -– Changing the order of parameters (e.g., one method with (String name, int id), another with (int id, String name)).
+//    --Return Type Does Not Matter: You cannot overload a method by changing its return type alone. The parameter list must still be different; otherwise, a compile-time error will occur.
+//    --Access Modifiers and Exceptions: Overloaded methods can have different access modifiers (public, private, etc.) and can throw different exceptions.
+//    --Static/Instance Methods: Both static and non-static methods can be overloaded.
+
 class Calculator {
     // Method 1: add two integers
     int add(int a, int b) {
